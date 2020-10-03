@@ -12,7 +12,7 @@ import dagger.Component;
 @Component (modules = {AppModule.class})
 public interface AppComponent {
 
-    /*@Component.Builder
+    @Component.Builder
     interface Builder {
         AppComponent Build();
         @BindsInstance
@@ -22,7 +22,7 @@ public interface AppComponent {
         @BindsInstance
         Builder writeTimeOut(@Named("wtimeout") int write_time_out);
 
-    }*/
+    }
 
     public void inject(ArticleListFragment fragment);
 

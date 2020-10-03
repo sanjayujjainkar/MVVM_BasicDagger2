@@ -65,9 +65,9 @@ public class ArticleListFragment extends Fragment implements ItemClickListener {
 
         viewModel.getArticleLiveDataRx().observe(this, new Observer<List<Article>>() {
             @Override
-            public void onChanged(@Nullable List<Article> gitCommits) {
-                if(gitCommits!=null) {
-                    gitCommitListAdapter.updateGitCommitList(gitCommits);
+            public void onChanged(@Nullable List<Article> articles) {
+                if(articles!=null) {
+                    gitCommitListAdapter.updateGitCommitList(articles);
                     Log.d("GitCommitListFragment", "adapter updated with new list");
                 } else {
                     ErrorHandling.showToast(getActivity(),"Something went wrong...Try again later");

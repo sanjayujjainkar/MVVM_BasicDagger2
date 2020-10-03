@@ -4,6 +4,8 @@ import com.pof.articles.data.RetrofitService;
 
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Named;
+
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
@@ -15,11 +17,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AppModule {
 
     @Provides
-    public OkHttpClient getOkHttpClient() {
+    public OkHttpClient getOkHttpClient(@Named("ctimeout") int ctimeout, @Named("rtimeout") int rtimeout, @Named("ctimeout") int wtimout) {
         return new OkHttpClient().newBuilder()
-                .connectTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
+                .connectTimeout(ctimeout, TimeUnit.SECONDS)
+                .readTimeout(rtimeout, TimeUnit.SECONDS)
+                .writeTimeout(wtimout, TimeUnit.SECONDS)
                 .build();
     }
 

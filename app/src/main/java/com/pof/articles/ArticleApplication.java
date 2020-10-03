@@ -14,11 +14,11 @@ public class ArticleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        appComponent = DaggerAppComponent.create();
-                        /*.connectionTimeOut(10)
+        appComponent = DaggerAppComponent.builder()
+                        .connectionTimeOut(10)
                         .readTimeOut(10)
                         .writeTimeOut(11)
-                        .Build();*/
+                        .Build();
     }
 
     public AppComponent getAppComponent() {
