@@ -4,14 +4,15 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
+import com.pof.articles.data.IRepository;
 import com.pof.articles.data.Repository;
 
 import javax.inject.Inject;
 
 public class ArticleViewModelFactory extends ViewModelProvider.NewInstanceFactory {
-    Repository repository;
+    IRepository repository;
     @Inject
-    public ArticleViewModelFactory(Repository repository) {
+    public ArticleViewModelFactory(IRepository repository) {
         this.repository = repository;
     }
 

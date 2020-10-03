@@ -20,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Repository {
+public class Repository implements IRepository {
 
     private RetrofitService retrofitService;
     private String TAG = Repository.class.getSimpleName();
@@ -32,8 +32,8 @@ public class Repository {
         this.retrofitService = retrofitService;
     }
 
+    @Override
     public LiveData<List<Article>> getArticles() {
-
         retrofitService.getArticles("1","10").enqueue(new Callback<List<Article>>() {
             @Override
             public void onResponse(Call<List<Article>> call, Response<List<Article>> response) {
@@ -49,6 +49,7 @@ public class Repository {
         return liveData;
     }
 
+    @Override
     public LiveData<List<Article>> getArticlesByRxJava() {
         //final MutableLiveData<List<Article>> liveData = new MutableLiveData<>();
 
@@ -78,6 +79,5 @@ public class Repository {
                     }
                 });
         return liveData;
-
     }
 }

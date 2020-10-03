@@ -1,11 +1,14 @@
 package com.pof.articles.dagger;
 
+import com.pof.articles.data.IRepository;
+import com.pof.articles.data.Repository;
 import com.pof.articles.data.RetrofitService;
 
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Named;
 
+import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
@@ -14,10 +17,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-public class AppModule {
+public abstract class AppModule {
 
     @Provides
-    public OkHttpClient getOkHttpClient(@Named("ctimeout") int ctimeout, @Named("rtimeout") int rtimeout, @Named("ctimeout") int wtimout) {
+    public static OkHttpClient getOkHttpClient(@Named("ctimeout") int ctimeout, @Named("rtimeout") int rtimeout, @Named("ctimeout") int wtimout) {
         return new OkHttpClient().newBuilder()
                 .connectTimeout(ctimeout, TimeUnit.SECONDS)
                 .readTimeout(rtimeout, TimeUnit.SECONDS)
@@ -26,7 +29,7 @@ public class AppModule {
     }
 
     @Provides
-    public Retrofit getRetrofit (OkHttpClient okHttpClient) {
+    public static Retrofit getRetrofit (OkHttpClient okHttpClient) {
         //initialise retrofit and instantiate RetrofitService
         return new Retrofit.Builder()
                 .baseUrl(RetrofitService.BaseURL)
@@ -37,8 +40,11 @@ public class AppModule {
     }
 
     @Provides
-    public RetrofitService getRetrofitService(Retrofit retrofit) {
+    public static RetrofitService getRetrofitService(Retrofit retrofit) {
         return retrofit.create(RetrofitService.class);
     }
+
+    @Binds
+    public abstract IRepository getRepository(Repository repository);
 
 }
