@@ -1,0 +1,21 @@
+
+|
+java:S1450"aRemove the "isDetailViewOpened" field and declare it as a local variable in the relevant methods.(í—´©úÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Í…¢þ
+K
+java:S1874)"0Remove this use of "getColor"; it is deprecated.(†™ù¨ÿÿÿÿÿ
+E
+java:S1659R"*Declare "imageArticle" on a separate line.(µ…Ë±úÿÿÿÿ
+?
+java:S1659S")Declare "designation" on a separate line.(ö‚Üº
+;
+java:S1659S"%Declare "content" on a separate line.(ö‚Üº
+9
+java:S1659S"#Declare "title" on a separate line.(ö‚Üº
+>
+java:S1659S"(Declare "articleURL" on a separate line.(ö‚Üº
+K
+java:S1068"5Remove this unused "itemClickListener" private field.(èŽÇ®
+Q
+java:S1068"6Remove this unused "isDetailViewOpened" private field.(í—´©úÿÿÿÿ

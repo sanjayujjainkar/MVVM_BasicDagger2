@@ -1,0 +1,21 @@
+
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+o
+?app/src/main/java/com/pof/articles/ui/GitCommitListAdapter.java,a\b\abe25f009998ee0bd79ed65ff49d8416f375631e
+m
+=app/src/main/java/com/pof/articles/ui/CustomTextSwitcher.java,a\d\ad4f521e2e4aa5613a8463abf574f4837eda905f
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+g
+7app/src/main/java/com/pof/articles/data/model/User.java,7\d\7d589979bc5e91c6157e92b21fd3f91a7c9b74ea
+i
+9app/src/main/java/com/pof/articles/data/model/Medium.java,9\d\9dc7de3235d8415e5ae2507f5408aabebab4ab3f
+g
+7app/src/main/java/com/pof/articles/data/Repository.java,0\1\01bb65e35ad1a4925fb3163067aceda21c1fc4f6
+s
+Capp/src/main/java/com/pof/articles/controller/ArticleViewModel.java,0\8\082d35812aa9c2979d2a2970b86cb60300b9b2a7
+n
+>app/src/main/java/com/pof/articles/ui/ArticleListFragment.java,9\a\9ae9a735113c5c8b6bf81f02f596986e3e67bfc3
+l
+<app/src/main/java/com/pof/articles/data/RetrofitService.java,c\d\cd607d189e1f1e5e03f89a97f220644f61fe2812

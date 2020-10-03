@@ -1,0 +1,11 @@
+
+Q	java:S110"<This class has 7 parents which is greater than 5 authorized.(àõÁö
+C
+java:S1185?"(Remove this method to simply inherit it.(Îè¨ùÿÿÿÿ
+v
+java:S3923M"[Remove this conditional structure or edit its code blocks so that they're not all the same.(´©¬§ûÿÿÿÿ
+P	java:S1254"<This block of commented-out lines of code should be removed.(îœ×V
+V	java:S125A"<This block of commented-out lines of code should be removed.(½Ì¡½üÿÿÿÿ
+V	java:S125N"<This block of commented-out lines of code should be removed.(½Ì¡½üÿÿÿÿ
+Q	java:S125P"<This block of commented-out lines of code should be removed.(„¨éÈ
+Q	java:S125T"<This block of commented-out lines of code should be removed.(Ô»Ì

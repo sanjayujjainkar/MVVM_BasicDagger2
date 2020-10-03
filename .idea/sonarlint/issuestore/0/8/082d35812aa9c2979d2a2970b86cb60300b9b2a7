@@ -1,0 +1,7 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(àë€üÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(äÉÖµøÿÿÿÿ
+P
+java:S1068"4Remove this unused "liveDataArticles" private field.(íÀìN8ïÔ«‡Ë.
+R
+java:S1128"0Remove this unused import 'io.reactivex.Single'.(úÃ¶“øÿÿÿÿ8ƒ’±‡Ë.

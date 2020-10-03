@@ -1,0 +1,14 @@
+
+i
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(Â¥Šˆøÿÿÿÿ
+m
+java:S1104"RMake blogId a static final constant or non-public and provide accessors if needed.(Ù¬”¾ıÿÿÿÿ
+k
+java:S1104"UMake createdAt a static final constant or non-public and provide accessors if needed.(û¿ñ¼
+g
+java:S1104	"QMake image a static final constant or non-public and provide accessors if needed.(•—î×
+g
+java:S1104
+"QMake title a static final constant or non-public and provide accessors if needed.(Å¬õ
+e
+java:S1104"OMake url a static final constant or non-public and provide accessors if needed.(…åØ

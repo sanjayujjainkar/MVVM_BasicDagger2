@@ -1,0 +1,15 @@
+
+J
+java:S1128"4Remove this unused import 'io.reactivex.Observable'.(–˜¼
+[
+java:S1124@"EReorder the modifiers to comply with the Java Language Specification.(Ò÷Â
+:
+java:S2116R"%Use "Arrays.toString(array)" instead.(‚€Ša
+L
+java:S1068""1Remove this unused "committerInfo" private field.(Ø°²úÿÿÿÿ
+t
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(€Ã»Üúÿÿÿÿ
+]	java:S125s"<This block of commented-out lines of code should be removed.(ò€’›úÿÿÿÿ8°ß®‡Ë.
+h	java:S116#"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ö¬÷ıÿÿÿÿ
+U	java:S106b"9Replace this use of System.out or System.err by a logger.(ã˜Ş8æ½¯‡Ë.
+X	java:S125Z"<This block of commented-out lines of code should be removed.(¿ğ†”8æ½¯‡Ë.
