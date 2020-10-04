@@ -5,21 +5,21 @@ import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
 
 import com.pof.articles.data.IRepository;
-import com.pof.articles.data.Repository;
 import com.pof.articles.data.model.Article;
 
 import java.util.List;
 
-import io.reactivex.Single;
+import javax.inject.Inject;
 
 public class ArticleViewModel extends ViewModel {
 
     private final LiveData<List<Article>> liveDataArticles;
     private IRepository repository;
 
+    @Inject
     public ArticleViewModel(@NonNull IRepository repository) {
         this.repository = repository;
-        liveDataArticles = repository.getArticlesByRxJava(); //getArticlesByRxJava() //getArticles();
+        liveDataArticles = this.repository.getArticlesByRxJava(); //getArticlesByRxJava() //getArticles();
     }
 
     /*public LiveData<List<Article>> getArticleLiveData() {

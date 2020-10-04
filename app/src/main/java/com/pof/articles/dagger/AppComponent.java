@@ -1,5 +1,9 @@
 package com.pof.articles.dagger;
 
+import android.content.Context;
+
+import com.pof.articles.data.IRepository;
+import com.pof.articles.data.Repository;
 import com.pof.articles.ui.ArticleListFragment;
 
 import javax.inject.Named;
@@ -21,8 +25,12 @@ public interface AppComponent {
         Builder readTimeOut(@Named("rtimeout") int read_time_out);
         @BindsInstance
         Builder writeTimeOut(@Named("wtimeout") int write_time_out);
+        /*@BindsInstance
+        Builder applicationContext(@Named("appContext") Context context);*/
 
     }
+
+    public IRepository getRepository();
 
     public void inject(ArticleListFragment fragment);
 

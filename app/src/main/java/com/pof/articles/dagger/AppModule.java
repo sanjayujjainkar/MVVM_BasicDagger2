@@ -1,5 +1,7 @@
 package com.pof.articles.dagger;
 
+import android.content.Context;
+
 import com.pof.articles.data.IRepository;
 import com.pof.articles.data.Repository;
 import com.pof.articles.data.RetrofitService;
@@ -7,6 +9,7 @@ import com.pof.articles.data.RetrofitService;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.Binds;
 import dagger.Module;
@@ -43,8 +46,13 @@ public abstract class AppModule {
     public static RetrofitService getRetrofitService(Retrofit retrofit) {
         return retrofit.create(RetrofitService.class);
     }
-
+    @Singleton
     @Binds
     public abstract IRepository getRepository(Repository repository);
+
+    @Provides
+    public static Context getContext(@Named("appContext") Context context) {
+        return context;
+    }
 
 }

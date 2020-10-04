@@ -19,6 +19,7 @@ import com.pof.articles.ArticleApplication;
 import com.pof.articles.R;
 import com.pof.articles.controller.ArticleViewModel;
 import com.pof.articles.controller.ArticleViewModelFactory;
+import com.pof.articles.dagger.ActivityComponent;
 import com.pof.articles.dagger.AppComponent;
 import com.pof.articles.data.model.Article;
 import com.pof.articles.data.model.GitCommit;
@@ -40,7 +41,7 @@ public class ArticleListFragment extends Fragment implements ItemClickListener {
     public static String TAG = "GitCommitListFragment";
 
     @Inject
-    ArticleViewModelFactory articleViewModelFactory;
+    ArticleViewModel viewModel;
     //private View selectedRow;
 
     @Nullable
@@ -59,9 +60,8 @@ public class ArticleListFragment extends Fragment implements ItemClickListener {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        AppComponent component = ((ArticleApplication)(getActivity().getApplication())).getAppComponent();
+        ActivityComponent component = ((MainActivity)getActivity()).getActivityComponent();
         component.inject(this);
-        final ArticleViewModel viewModel = ViewModelProviders.of(this, articleViewModelFactory).get(ArticleViewModel.class);
 
         viewModel.getArticleLiveDataRx().observe(this, new Observer<List<Article>>() {
             @Override

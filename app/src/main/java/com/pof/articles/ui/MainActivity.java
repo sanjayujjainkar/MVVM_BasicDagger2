@@ -8,10 +8,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.pof.articles.ArticleApplication;
 import com.pof.articles.R;
+import com.pof.articles.dagger.ActivityComponent;
+import com.pof.articles.dagger.DaggerActivityComponent;
 
 public class MainActivity extends FragmentActivity implements ArticleListFragment.Callback {
-
+    private ActivityComponent activityComponent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,11 @@ public class MainActivity extends FragmentActivity implements ArticleListFragmen
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragment_container, fragment, ArticleListFragment.TAG).commit();
         }
+
+        activityComponent = DaggerActivityComponent.builder().fragmentActivity(this)
+                                            .appComponent(((ArticleApplication)getApplication()).getAppComponent())
+                                            .Build();
+
 
     }
 
@@ -64,5 +72,9 @@ public class MainActivity extends FragmentActivity implements ArticleListFragmen
         FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment fragment = fragmentManager.findFragmentByTag(ArticleListFragment.TAG);
         ((ArticleListFragment)fragment).resetListView();
+    }
+
+    public ActivityComponent getActivityComponent() {
+        return activityComponent;
     }
 }
